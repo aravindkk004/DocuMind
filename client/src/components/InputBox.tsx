@@ -119,7 +119,7 @@ const InputBox: React.FC<InputBoxProps> = ({
                   if (sessionId) {
                     try {
                       await axios.post(
-                        "http://127.0.0.1:5000/api/end_session",
+                        `${process.env.NEXT_PUBLIC_API}api/end_session`,
                         { session_id: sessionId }
                       );
                       setSessionId(null);

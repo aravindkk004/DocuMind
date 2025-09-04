@@ -47,7 +47,7 @@ export default function Home() {
       setAnalyzing(true);
 
       const response = await axios.post(
-        "http://127.0.0.1:5000/api/analyze_pdf",
+        `${process.env.NEXT_PUBLIC_API}api/analyze_pdf`,
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -86,7 +86,7 @@ export default function Home() {
     try {
       setBotTyping(true);
       const response = await axios.post(
-        "http://127.0.0.1:5000/api/chat_with_pdf",
+        `${process.env.NEXT_PUBLIC_API}api/chat_with_pdf`,
         {
           session_id: sessionId,
           question: text,

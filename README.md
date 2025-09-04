@@ -18,7 +18,7 @@ Backend:
   - Flask
   - LangChain (FAISS vectorstore)
   - HuggingFace embeddings
-  - Google Gemini API
+  - LLM
 
 Frontend:
   - Next.js (React)

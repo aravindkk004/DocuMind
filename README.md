@@ -14,21 +14,21 @@ AI PDF Chatbot is an intelligent web application that allows users to upload a P
 ## 🛠️ Technologies Used
 
 Backend:
-    - Python
-    - Flask
-    - LangChain (FAISS vectorstore)
-    - HuggingFace embeddings
-    - Google Gemini API
+  - Python
+  - Flask
+  - LangChain (FAISS vectorstore)
+  - HuggingFace embeddings
+  - Google Gemini API
 
 Frontend:
-    - Next.js (React)
-    - TypeScript
-    - Tailwind CSS
-    - React Toastify
+  - Next.js (React)
+  - TypeScript
+  - Tailwind CSS
+  - React Toastify
 
 Other Tools:
-    - Git & GitHub
-    - Python Virtual Environment (venv)
+  - Git & GitHub
+  - Python Virtual Environment (venv)
 
 ## ⚡ Usage
   1. Open the web app in your browser

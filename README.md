@@ -16,8 +16,8 @@ AI PDF Chatbot is an intelligent web application that allows users to upload a P
 Backend:
   - Python
   - Flask
-  - LangChain (FAISS vectorstore)
-  - HuggingFace embeddings
+  - LangChain 
+  - RAG
   - LLM
 
 Frontend:

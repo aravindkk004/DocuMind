@@ -49,9 +49,9 @@ export default function Home() {
       const response = await axios.post(
         `${process.env.NEXT_PUBLIC_API}api/analyze_pdf`,
         formData,
-        {
-          headers: { "Content-Type": "multipart/form-data" },
-        }
+        // {
+        //   headers: { "Content-Type": "multipart/form-data" },
+        // }
       );
 
       if (response.status === 200) {

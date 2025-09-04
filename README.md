@@ -1,6 +1,6 @@
-# AI PDF Chatbot
+# DocuMind (AI PDF ChatBot)
 
-AI PDF Chatbot is an intelligent web application that allows users to upload a PDF document, analyze its content, and ask questions in natural language. The chatbot leverages AI to provide accurate answers based on the uploaded PDF, making it ideal for study material, reports, or documentation.
+DocuMind is an intelligent web application that allows users to upload a PDF document, analyze its content, and ask questions in natural language. The chatbot leverages AI to provide accurate answers based on the uploaded PDF, making it ideal for study material, reports, or documentation.
 
 ## 🚀 Features
   - Upload and analyze PDF documents

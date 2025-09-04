@@ -7,6 +7,7 @@ from langchain.embeddings import HuggingFaceEmbeddings
 import os
 import uuid
 import time
+from flask_cors import CORS, cross_origin
 
 analyze_pdf_bp = Blueprint('analyze_pdf', __name__)
 # VECTORSTORE_DIR = "vectorstore"
@@ -54,6 +55,7 @@ def vectorize_and_save(chunks):
 
 
 @analyze_pdf_bp.route('/analyze_pdf', methods=['POST'])
+@cross_origin(supports_credentials=True)
 def analyze_pdf():
     # getting data from frontend
     if 'file' not in request.files:

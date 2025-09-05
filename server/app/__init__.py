@@ -6,7 +6,8 @@ from .routes.end_session import end_session_bp
 
 def create_app():
     app = Flask(__name__)
-    CORS(app, support_credentials=True)
+    
+    CORS(app, resources={r"/api/*": {"origins": "https://documind-kk.vercel.app"}})
 
     # Initialize session storage here
     app.session_vectorstores = {}  

@@ -4,7 +4,6 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain.docstore.document import Document
 from langchain.embeddings import HuggingFaceEmbeddings
-import os
 import uuid
 import time
 from flask_cors import CORS, cross_origin
@@ -55,7 +54,7 @@ def vectorize_and_save(chunks):
 
 
 @analyze_pdf_bp.route('/analyze_pdf', methods=['POST'])
-@cross_origin(supports_credentials=True)
+@cross_origin(origin='*')
 def analyze_pdf():
     # getting data from frontend
     if 'file' not in request.files:

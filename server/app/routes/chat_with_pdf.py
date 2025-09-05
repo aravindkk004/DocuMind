@@ -3,7 +3,6 @@ import os
 import math
 import google.generativeai as genai
 import time
-from flask_cors import CORS, cross_origin
 
 chat_with_pdf_bp = Blueprint('chat_with_pdf', __name__)
 
@@ -11,7 +10,6 @@ chat_with_pdf_bp = Blueprint('chat_with_pdf', __name__)
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 @chat_with_pdf_bp.route('/chat_with_pdf', methods=['POST'])
-@cross_origin(supports_credentials=True)
 def chat_with_pdf():
     data = request.get_json()
     if not data:

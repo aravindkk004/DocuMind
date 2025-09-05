@@ -3,7 +3,7 @@ import ChatBox from "@/components/ChatBox";
 import InputBox from "@/components/InputBox";
 import axios from "axios";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
 interface Message {
@@ -20,6 +20,14 @@ export default function Home() {
   const [sessionId, setSessionId] = useState<string | null>(null);
   const [analyzed, setAnalyzed] = useState(false);
   const [botTyping, setBotTyping] = useState(false);
+
+  useEffect(()=> {
+    const fetching = async () => {
+      const response = await axios.get(`${process.env.NEXT_PUBLIC_API}`)
+      console.log(response.data.message);
+    }
+    fetching();
+  }, [])
 
   // Handle file upload
   const handleFileUpload = (file: File | null) => {

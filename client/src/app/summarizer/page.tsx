@@ -23,7 +23,7 @@ export default function Home() {
 
   useEffect(()=> {
     const fetching = async () => {
-      const response = await axios.get(`${process.env.NEXT_PUBLIC_API}`)
+      const response = await axios.get(`${process.env.NEXT_PUBLIC_API}api`)
       console.log(response.data.message);
     }
     fetching();
